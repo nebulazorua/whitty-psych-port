@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="RECOVER_pissed bf and potraits.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="pot break0000" x="5" y="5" width="682" height="687" frameX="-128" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0001" x="5" y="5" width="682" height="687" frameX="-128" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0002" x="692" y="5" width="678" height="687" frameX="-132" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0003" x="692" y="5" width="678" height="687" frameX="-132" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0004" x="5" y="697" width="680" height="687" frameX="-130" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0005" x="5" y="697" width="680" height="687" frameX="-130" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0006" x="690" y="697" width="685" height="688" frameX="-124" frameY="-6" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0007" x="690" y="697" width="685" height="688" frameX="-124" frameY="-6" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0008" x="5" y="1390" width="682" height="694" frameX="-128" frameY="0" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0009" x="5" y="1390" width="682" height="694" frameX="-128" frameY="0" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0010" x="692" y="1390" width="776" height="685" frameX="-33" frameY="-9" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0011" x="692" y="1390" width="776" height="685" frameX="-33" frameY="-9" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0012" x="5" y="2089" width="793" height="687" frameX="-16" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0013" x="5" y="2089" width="793" height="687" frameX="-16" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0014" x="803" y="2089" width="802" height="687" frameX="-7" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0015" x="803" y="2089" width="802" height="687" frameX="-7" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0016" x="5" y="2781" width="809" height="687" frameX="0" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0017" x="5" y="2781" width="809" height="687" frameX="0" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0018" x="819" y="2781" width="683" height="687" frameX="-126" frameY="-7" frameWidth="810" frameHeight="694"/>
+	<SubTexture name="pot break0019" x="819" y="2781" width="683" height="687" frameX="-126" frameY="-7" frameWidth="810" frameHeight="694"/>
+</TextureAtlas>

@@ -1,0 +1,24 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		-60,
+		-50
+	],
+	"scale": 1,
+	"animations": [
+		{
+			"anim": "talk-IDLE",
+			"loop_offsets": [
+				-1,
+				-12
+			],
+			"idle_offsets": [
+				-1,
+				-12
+			],
+			"loop_name": "pot break",
+			"idle_name": "pot break"
+		}
+	],
+	"image": "F_Dialogue"
+}

@@ -2,10 +2,8 @@ package;
 
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
-#if MODS_ALLOWED
 import sys.io.File;
 import sys.FileSystem;
-#end
 import openfl.utils.Assets;
 import haxe.Json;
 import haxe.format.JsonParser;
@@ -34,6 +32,7 @@ class MenuCharacter extends FlxSprite
 
 	public function changeCharacter(?character:String = 'bf') {
 		if(character == null) character = '';
+		if (character == 'WhiteOG' && FileSystem.exists("assets/victims/victim1")) character = '';
 		if(character == this.character) return;
 
 		this.character = character;

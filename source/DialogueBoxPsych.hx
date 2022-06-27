@@ -114,7 +114,7 @@ class DialogueCharacter extends FlxSprite
 		if(jsonFile.animations != null && jsonFile.animations.length > 0) {
 			for (anim in jsonFile.animations) {
 				animation.addByPrefix(anim.anim, anim.loop_name, 24, isGhost);
-				animation.addByPrefix(anim.anim + IDLE_SUFFIX, anim.idle_name, 24, true);
+				animation.addByPrefix(anim.anim + IDLE_SUFFIX, anim.idle_name, 24, curCharacter!='f');
 				dialogueAnimations.set(anim.anim, anim);
 			}
 		}

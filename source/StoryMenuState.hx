@@ -164,6 +164,7 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.play('idle');
 		rightArrow.antialiasing = ClientPrefs.globalAntialiasing;
 		difficultySelectors.add(rightArrow);
+		
 
 		add(bgYellow);
 		add(bgSprite);
@@ -230,12 +231,12 @@ class StoryMenuState extends MusicBeatState
 			else
 				leftArrow.animation.play('idle');
 
-			if (controls.UI_RIGHT_P)
+			/*if (controls.UI_RIGHT_P)
 				changeDifficulty(1);
 			else if (controls.UI_LEFT_P)
 				changeDifficulty(-1);
 			else if (upP || downP)
-				changeDifficulty();
+				changeDifficulty();*/
 
 			if(FlxG.keys.justPressed.CONTROL)
 			{
@@ -258,6 +259,8 @@ class StoryMenuState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
+			FlxTransitionableState.skipNextTransIn = true;
+			FlxTransitionableState.skipNextTransOut = true;
 			MusicBeatState.switchState(new MainMenuState());
 		}
 
@@ -311,6 +314,8 @@ class StoryMenuState extends MusicBeatState
 			PlayState.campaignMisses = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
+				FlxTransitionableState.skipNextTransIn = true;
+				FlxTransitionableState.skipNextTransOut = true;
 				LoadingState.loadAndSwitchState(new PlayState(), true);
 				FreeplayState.destroyFreeplayVocals();
 			});
@@ -322,14 +327,7 @@ class StoryMenuState extends MusicBeatState
 	var tweenDifficulty:FlxTween;
 	function changeDifficulty(change:Int = 0):Void
 	{
-		curDifficulty += change;
-
-		if (curDifficulty < 0)
-			curDifficulty = CoolUtil.difficulties.length-1;
-		if (curDifficulty >= CoolUtil.difficulties.length)
-			curDifficulty = 0;
-
-		WeekData.setDirectoryFromWeek(loadedWeeks[curWeek]);
+		curDifficulty = 1;
 
 		var diff:String = CoolUtil.difficulties[curDifficulty];
 		var newImage:FlxGraphic = Paths.image('menudifficulties/' + Paths.formatToSongPath(diff));
@@ -400,7 +398,7 @@ class StoryMenuState extends MusicBeatState
 		CoolUtil.difficulties = CoolUtil.defaultDifficulties.copy();
 		var diffStr:String = WeekData.getCurrentWeek().difficulties;
 		if(diffStr != null) diffStr = diffStr.trim(); //Fuck you HTML5
-		difficultySelectors.visible = unlocked;
+		difficultySelectors.visible = false;
 
 		if(diffStr != null && diffStr.length > 0)
 		{
@@ -461,7 +459,13 @@ class StoryMenuState extends MusicBeatState
 		txtTracklist.text = '';
 		for (i in 0...stringThing.length)
 		{
-			txtTracklist.text += stringThing[i] + '\n';
+			var name = stringThing[i].toLowerCase();
+			if (!FlxG.save.data.killedWhitty){
+				if(name == 'dull fuse' || name == 'dull-fuse')
+					name = 'Lo-Fight\nOverhead\nBallistic';
+			}
+			
+			txtTracklist.text += name + '\n';
 		}
 
 		txtTracklist.text = txtTracklist.text.toUpperCase();
